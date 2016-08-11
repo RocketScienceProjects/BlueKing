@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>BlueKing</groupId>
   <artifactId>BlueKing</artifactId>
-  <version>16.0.1-SNAPSHOT</version>
+  <version>16.0.1.41</version>
   <packaging>war</packaging>
   <dependencies>
 		<dependency>
@@ -100,7 +100,7 @@
 		<connection>scm:git:git@github.com:RocketScienceProjects/BlueKing.git</connection>
 		<developerConnection>scm:git:git@github.com:RocketScienceProjects/BlueKing.git</developerConnection>
 		<url>scm:git:git@github.com:RocketScienceProjects/BlueKing.git</url>
-		<tag>BlueKing-11.0.1</tag>
+		<tag>BlueKing-16.0.1.41</tag>
 	</scm>
 
 	<pluginRepositories>
