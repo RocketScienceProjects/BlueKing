@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>BlueKing</groupId>
   <artifactId>BlueKing</artifactId>
-  <version>12.0.16-SNAPSHOT</version>
+  <version>16.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
   <dependencies>
 		<dependency>
@@ -37,9 +37,16 @@
 			<artifactId>commons-logging</artifactId>
 			<version>1.1.3</version>
 		</dependency>
+		<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>4.11</version>
+				<scope>test</scope>
+			</dependency>
 	</dependencies>
 	<build>
 		<sourceDirectory>src</sourceDirectory>
+		<testSourceDirectory>test/com/blueking/controller</testSourceDirectory>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -49,6 +56,24 @@
 					<target>1.7</target>
 				</configuration>
 			</plugin>
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.7.6.201602180812</version>
+
+                <executions>
+                    <execution>
+                        <id>default-prepare-agent</id>
+                        <goals><goal>prepare-agent</goal></goals>
+                    </execution>
+                    <execution>
+                        <id>default-report</id>
+                        <phase>prepare-package</phase>
+                        <goals><goal>report</goal></goals>
+                    </execution>
+                </executions>
+            </plugin>
+
 			<plugin>
 				<artifactId>maven-war-plugin</artifactId>
 				<version>2.4</version>
